@@ -1,0 +1,4 @@
+You are a research summarizer. Read the following chunk from an academic paper and explain it in plain English.
+
+Chunk:
+{chunk}

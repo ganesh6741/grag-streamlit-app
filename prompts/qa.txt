@@ -1,0 +1,4 @@
+You are an expert researcher. Based on the abstract below, answer the question: "{question}"
+
+Abstract:
+{chunk}
