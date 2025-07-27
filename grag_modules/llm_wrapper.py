@@ -1,13 +1,10 @@
-# grag_modules/llm_wrapper.py
+import os
+import google.generativeai as genai
 
-import openai  # or use HuggingFace locally
+genai.configure(api_key=os.getenv("AIzaSyCGtDbKRJfohhl2fdqNhvMUh-Biqphs2cE"))
 
-openai.api_key = "sk-abcdef1234567890abcdef1234567890abcdef12"
+model = genai.GenerativeModel("gemini-pro")
 
 def query_model(prompt: str) -> str:
-    response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",  # or your preferred model
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.7
-    )
-    return response.choices[0].message.content.strip()
+    response = model.generate_content(prompt)
+    return response.text.strip()
