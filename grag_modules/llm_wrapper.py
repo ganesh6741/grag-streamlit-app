@@ -2,7 +2,7 @@
 
 import openai  # or use HuggingFace locally
 
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = "sk-abcdef1234567890abcdef1234567890abcdef12"
 
 def query_model(prompt: str) -> str:
     response = openai.ChatCompletion.create(
